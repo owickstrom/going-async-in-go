@@ -50,13 +50,7 @@ body {
     color: #444444;
     min-height: 740px;
 
-    background: rgb(215, 215, 215);
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(255, 255, 255)), to(rgb(200, 200, 200)));
-    background: -webkit-radial-gradient(rgb(255, 255, 255), rgb(200, 200, 200));
-    background:    -moz-radial-gradient(rgb(255, 255, 255), rgb(200, 200, 200));
-    background:     -ms-radial-gradient(rgb(255, 255, 255), rgb(200, 200, 200));
-    background:      -o-radial-gradient(rgb(255, 255, 255), rgb(200, 200, 200));
-    background:         radial-gradient(rgb(255, 255, 255), rgb(200, 200, 200));
+    background: white;
 }
 
 a {
@@ -193,9 +187,8 @@ li {
 }
 
 .step.code {
-    display: inline-block;
     width: auto;
-    font-size: 32px;
+    font-size: 125%;
     text-align: left;
 }
 

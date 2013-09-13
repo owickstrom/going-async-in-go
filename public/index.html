@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+<html lang="en" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html"
       xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8"/>
@@ -11,7 +12,8 @@
           content="Async programming with Go"/>
     <meta name="author" content="Johannes Pelto-Piri & Oskar Wickström"/>
 
-    <link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/xcode.min.css">
+    <link rel="stylesheet"
+          href="http://yandex.st/highlightjs/7.3/styles/xcode.min.css">
     <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
     <script>
         hljs.initHighlightingOnLoad();
@@ -24,10 +26,12 @@
 </head>
 <body class="impress-not-supported">
 <div class="fallback-message">
-    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified
+    <p>Your browser <b>doesn't support the features required</b> by impress.js,
+        so you are presented with a simplified
         version of this presentation.</p>
 
-    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>,
+        <b>Safari</b> or <b>Firefox</b> browser.</p>
 </div>
 
 <div id="impress">
@@ -40,6 +44,34 @@
 
     <div id="what-is-bdd" class="step single-sentence list-item" data-x="2000">
         <h2><q>what is bdd?</q></h2>
+    </div>
+
+    <div id="shared-context-sample" class="step code list-item" data-x="4000">
+    <pre>
+        <code class="java">
+            public class TransferFundsStepdefs {
+            // ...
+            @When("^transferring (\\d+?) from account (.+?) to account (.+?)$")
+            public void when_transferring_from_account_to_account(BigDecimal
+            amount, String from, String to) {
+            try {
+            transferService.transfer(amount, from, to);
+            } catch (ValidationError e) {
+            context.setErrors(e.getErrorNames());
+            }
+            }
+            }
+            public class FindAccountByNameStepdefs {
+            // ...
+            @Then("^(.*?) should be reported$")
+            public void then_errors_should_be_reported(String errors) {
+            for(String error : ...) {
+            Assert.assertTrue(context.getErrors().contains(error));
+            }
+            }
+            }
+        </code>
+    </pre>
     </div>
 
     <div class="hint">
