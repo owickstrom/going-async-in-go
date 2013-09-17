@@ -46,7 +46,8 @@
         <h4>this is a h4</h4>
     </div>
 
-    <div id="chained-routines-sample" class="step code" data-x="6000">
+    <div id="chained-routines-sample" class="step" data-x="6000">
+        <h3>Lots of routines and channels</h3>
         <script src="https://gist.github.com/OskarWickstrom/6598436.js"></script>
     </div>
 
@@ -56,6 +57,15 @@
             <li>It rocks</li>
             <li>It's awesome</li>
             <li>It kicks ass</li>
+        </ul>
+    </div>
+
+    <div id="gomaxprocs" class="step" data-x="10000">
+        <h2><code>GOMAXPROCS</code></h2>
+        <ul>
+            <li>Sets the maximum number of CPU used.</li>
+            <li>Can be set programatically with <code>runtime.GOMAXPROCS(0)</code>.</li>
+            <li>Will be removed when the Go scheduler improves.</li>
         </ul>
     </div>
 
