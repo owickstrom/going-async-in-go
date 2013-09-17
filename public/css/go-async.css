@@ -28,6 +28,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    font-size: 16px;
 }
 blockquote, q {
     quotes: none;
@@ -133,8 +134,8 @@ li {
     -o-box-sizing:      border-box;
     box-sizing:         border-box;
 
-    font-size: 55px;
-    line-height: 1.5;
+    font-size: 300%;
+    line-height: 1.2;
 }
 
 /*
@@ -217,7 +218,7 @@ span.artifact {
 }
 
 #intro h1 {
-    font-size: 200%;
+    font-size: 175%;
     line-height: 1.1em;
     margin-bottom: .2em;
     color: #3A4AA4;
@@ -341,3 +342,11 @@ span.artifact {
 */
 .impress-enabled          { pointer-events: none }
 .impress-enabled #impress { pointer-events: auto }
+
+.gist,
+.gist-file .gist-data{
+    border-bottom: none !important;
+}
+.gist-meta {
+    display: none !important;
+}

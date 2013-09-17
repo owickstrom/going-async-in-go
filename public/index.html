@@ -12,12 +12,6 @@
           content="Async programming with Go"/>
     <meta name="author" content="Johannes Pelto-Piri & Oskar Wickström"/>
 
-    <link rel="stylesheet"
-          href="http://yandex.st/highlightjs/7.3/styles/xcode.min.css">
-    <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-    <script>
-        hljs.initHighlightingOnLoad();
-    </script>
 
     <link href="css/go-async.css" rel="stylesheet"/>
 
@@ -37,7 +31,7 @@
 <div id="impress">
 
     <div id="intro" class="step">
-        <h1>The Go Programming Language</h1>
+        <h1>Going Async in Go</h1>
 
         <p>it's really cool</p>
     </div>
@@ -46,32 +40,8 @@
         <h2><q>what is bdd?</q></h2>
     </div>
 
-    <div id="shared-context-sample" class="step code list-item" data-x="4000">
-    <pre>
-        <code class="java">
-            public class TransferFundsStepdefs {
-            // ...
-            @When("^transferring (\\d+?) from account (.+?) to account (.+?)$")
-            public void when_transferring_from_account_to_account(BigDecimal
-            amount, String from, String to) {
-            try {
-            transferService.transfer(amount, from, to);
-            } catch (ValidationError e) {
-            context.setErrors(e.getErrorNames());
-            }
-            }
-            }
-            public class FindAccountByNameStepdefs {
-            // ...
-            @Then("^(.*?) should be reported$")
-            public void then_errors_should_be_reported(String errors) {
-            for(String error : ...) {
-            Assert.assertTrue(context.getErrors().contains(error));
-            }
-            }
-            }
-        </code>
-    </pre>
+    <div id="chained-routines-sample" class="step code list-item" data-x="4000">
+    <script src="https://gist.github.com/OskarWickstrom/6597595.js"></script>
     </div>
 
     <div class="hint">
