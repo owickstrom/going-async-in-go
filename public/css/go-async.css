@@ -343,10 +343,19 @@ span.artifact {
 .impress-enabled          { pointer-events: none }
 .impress-enabled #impress { pointer-events: auto }
 
-.gist,
-.gist-file .gist-data{
-    border-bottom: none !important;
-}
 .gist-meta {
     display: none !important;
+}
+
+.gist .gist-file {
+    border: none !important;
+}
+
+.gist .gist-file .gist-data {
+    background-color: transparent !important;
+    border-bottom: none !important;
+}
+
+.gist .gist-file .gist-data .line-numbers {
+    display: none;
 }
