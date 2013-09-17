@@ -36,19 +36,37 @@
         <p>Johannes Pelto-Piri & Oskar Wickström</p>
     </div>
 
-    <div id="some-tricky-question" class="step single-sentence">
-        <h2><q>some tricky question?</q></h2>
+    <div id="what-is-go" class="step">
+        <h3>What is Go?</h3>
+        <blockquote cite="http://golang.org">
+            Go is an open source programming environment that makes it
+            easy to build simple, reliable, and efficient software.
+        </blockquote>
     </div>
 
-    <div id="stuff" class="step">
-        <h2>this is a h2</h2>
-        <h3>this is a h3</h3>
-        <h4>this is a h4</h4>
+    <div id="language-overview" class="step">
+        <h3>Overview</h3>
+        <ul>
+            <li>Open source, backed by Google</li>
+            <li>Compiled</li>
+            <li>Statically typed</li>
+            <li>Garbage collected</li>
+            <li>Concurrent</li>
+        </ul>
+    </div>
+
+    <div id="so-what-does-it-look-like" class="step single-sentence">
+        <h2><q>So what does it look like?</q></h2>
+    </div>
+
+    <div id="hello-world" class="step">
+        <h3>Hello World in Go</h3>
+        <script src="https://gist.github.com/OskarWickstrom/6598436.js?file=hello-world.go"></script>
     </div>
 
     <div id="chained-routines-sample" class="step">
         <h3>Lots of routines and channels</h3>
-        <script src="https://gist.github.com/OskarWickstrom/6598436.js"></script>
+        <script src="https://gist.github.com/OskarWickstrom/6598436.js?file=forwarders.go"></script>
     </div>
 
     <div id="advantages" class="step">
@@ -64,7 +82,9 @@
         <h2><code>GOMAXPROCS</code></h2>
         <ul>
             <li>Sets the maximum number of CPU used.</li>
-            <li>Can be set programatically with <code>runtime.GOMAXPROCS(0)</code>.</li>
+            <li>Can be set programatically with
+                <code>runtime.GOMAXPROCS(0)</code>.
+            </li>
             <li>Will be removed when the Go scheduler improves.</li>
         </ul>
     </div>
