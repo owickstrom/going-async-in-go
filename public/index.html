@@ -229,9 +229,16 @@
     <div id="other-channel-operations" class="step">
         <h3>Other Channel Operations</h3>
 
-        <p><code>len(c)</code></p>
-
-        <p><code>cap(c)</code></p>
+        <ul>
+            <li>
+                <code>len(c)</code> returns the number of elements in a channel. In
+                a non-buffered channel this is always 0.
+            </li>
+            <li>
+                <code>cap(c)</code> returns the element capacity in a channel. In
+                a non-buffered channel this is always 0.
+            </li>
+        </ul>
     </div>
 
     <div id="gomaxprocs" class="step">
