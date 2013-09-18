@@ -55,7 +55,7 @@
     </div>
 
     <div id="so-what-does-it-look-like" class="step single-sentence">
-        <h2><q>So what does it look like?</q></h2>
+        <h3><q>So what does it look like?</q></h3>
     </div>
 
     <div id="hello-world" class="step">
@@ -64,12 +64,12 @@
     </div>
 
     <div id="variables" class="step">
-        <h2>Variables</h2>
+        <h3>Variables</h3>
         <script src="https://gist.github.com/OskarWickstrom/6598436.js?file=variables.go"></script>
     </div>
 
     <div id="slices" class="step">
-        <h2>Slices</h2>
+        <h3>Slices</h3>
         <ul>
             <li>
                 Slices wraps the more low level arrays in Go, and are the most
@@ -81,12 +81,12 @@
     </div>
 
     <div id="slices-example" class="step">
-        <h2>Slices and Slicing</h2>
+        <h3>Slices and Slicing</h3>
         <script src="https://gist.github.com/OskarWickstrom/6598436.js?file=slices.go"></script>
     </div>
 
     <div id="maps" class="step">
-        <h2>Maps</h2>
+        <h3>Maps</h3>
         <ul>
             <li>
                 Slices wraps the more low level arrays in Go, and are the most
@@ -98,18 +98,18 @@
     </div>
 
     <div id="maps-example" class="step">
-        <h2>Working with Maps</h2>
+        <h3>Working with Maps</h3>
         <script src="https://gist.github.com/OskarWickstrom/6598436.js?file=maps.go"></script>
     </div>
 
     <div id="multiple-return-values" class="step">
-        <h2>Multiple Return Values</h2>
+        <h3>Multiple Return Values</h3>
         <script src="https://gist.github.com/Pelto/81321895fc526c1f5ccc.js"></script>
     </div>
 
 
     <div id="defer" class="step">
-        <h2>Defer</h2>
+        <h3>Defer</h3>
 
         <ul>
             <li>
@@ -132,7 +132,7 @@
     </div>
 
     <div id="interfaces" class="step">
-        <h3>Interfaces</h2>
+        <h3>Interfaces</h3>
 
         <ul>
             <li>They are satisfied implicitly.</li>
@@ -142,13 +142,13 @@
     </div>
 
     <div id="interfaces-example" class="step">
-        <h3>Interfaces Example</h2>
+        <h3>Interfaces Example</h3>
 
         <script src="https://gist.github.com/Pelto/463a336c3370a1ba297d.js"></script>
     </div>
 
     <div id="concurrency-in-go" class="step">
-        <h3>Concurrency in Go</h2>
+        <h3>Concurrency in Go</h3>
         <ul>
             <li>Goroutines are small lightweight processes that are managed by
                 Go's runtime.
@@ -156,14 +156,28 @@
             <li>Channels are first class citizen that connects Goroutines.</li>
         </ul>
     </div>
-    
+
     <div id="pingpong" class="step">
-        <h2>Ping Pong</h2>
+        <h3>Ping Pong</h3>
         <script src="https://gist.github.com/Pelto/52dbe221a4ae086d5a2a.js"></script>
     </div>
 
+    <div id="goroutines-are-cheap" class="step">
+        <h3>Goroutines are Cheap</h3>
+        <ul>
+            <li>~4KB initial memory overhead.</li>
+            <li>They are multiplexed across OS threads.</li>
+            <li>Goroutines do not block on IO.</li>
+        </ul>
+    </div>
+
+    <div id="non-blocking-io-sample" class="step">
+        <h3>Non-blocking IO in Goroutines</h3>
+        <script src="https://gist.github.com/OskarWickstrom/6598436.js?file=non-blocking.go"></script>
+    </div>
+
     <div id="so-what-about-something-more" class="step single-sentence">
-        <h2><q>What about something more advanced?</q></h2>
+        <h3><q>What about something more advanced?</q></h3>
     </div>
 
     <div id="chained-routines-sample" class="step">
@@ -172,7 +186,7 @@
     </div>
     
     <div id="select-over-channels" class="step">
-        <h2>Select over Channels</h2>
+        <h3>Select over Channels</h3>
 
         <p><code>TODO</code></p>
     </div>
@@ -199,16 +213,11 @@
     </div>
     
     <div id="timers-and-tickers" class="step">
-        <h2>Timers & Tickers</h2>
+        <h3>Timers & Tickers</h3>
 
-        <ul>
-            <li>Managed by channels</li>
-            <p>
-                <script src="https://gist.github.com/Pelto/3b1d7b62d67c1060616f.js"></script>
-            </p>
+        <p>Managed by channels</p>
+        <script src="https://gist.github.com/Pelto/3b1d7b62d67c1060616f.js"></script>
     </div>
-    
-    
 
     <div id="iterating-channel-elements" class="step">
         <h3>Iterating Channel Elements</h3>
@@ -216,7 +225,7 @@
     </div>
 
     <div id="other-channel-operations" class="step">
-        <h2>Other Channel Operations</h2>
+        <h3>Other Channel Operations</h3>
 
         <p><code>len(c)</code></p>
 
@@ -224,7 +233,7 @@
     </div>
 
     <div id="gomaxprocs" class="step">
-        <h2><code>GOMAXPROCS</code></h2>
+        <h3><code>GOMAXPROCS</code></h3>
         <ul>
             <li>Sets the maximum number of CPU used.</li>
             <li>Can be set programatically with
@@ -235,13 +244,13 @@
     </div>
 
     <div id="atomic-counters" class="step">
-        <h2>Atomic Counters</h2>
+        <h3>Atomic Counters</h3>
 
         <p><code>TODO</code></p>
     </div>
 
     <div id="mutexes" class="step">
-        <h2>Mutexes</h2>
+        <h3>Mutexes</h3>
 
         <p><code>TODO</code></p>
 
