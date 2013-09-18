@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en" xmlns="http://www.w3.org/1999/html"
-      xmlns="http://www.w3.org/1999/html"
       xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8"/>
@@ -110,19 +109,35 @@
 
 
     <div id="defer" class="step">
-        <h2><code>defer</code></h2>
-
-        <p><code>TODO, read <a href="http://blog.golang.org/defer-panic-and-recover">this</a>.</code></p>
-    </div>
-
-
-    <div id="interfaces" class="step">
-        <h2>Interfaces</h2>
+        <h2>Defer</h2>
 
         <ul>
-            <li>They are satisfied implicitly</li>
-            <li>Statically checked to avoid runtime errors</li>
-            <li>In short, <em>statically checked duck typing</em></li>
+            <li>
+                <code>defer</code> schedules a function to be called before
+                returning from the function calling <code>defer</code>.
+            </li>
+            <li>
+                The arguments of the deferred function are evaluated when the
+                function is called, not at the call to <code>defer</code>.
+            </li>
+            <li>
+                The order of deferred function execution is FILO.
+            </li>
+        </ul>
+    </div>
+
+    <div id="defer-example" class="step">
+        <h3>Closing a file with <code>defer</code></h3>
+        <script src="https://gist.github.com/OskarWickstrom/6598436.js?file=defer.go"></script>
+    </div>
+
+    <div id="interfaces" class="step">
+        <h3>Interfaces</h2>
+
+        <ul>
+            <li>They are satisfied implicitly.</li>
+            <li>Statically checked to avoid runtime errors.</li>
+            <li>In short, <em>statically checked duck typing.</em></li>
         </ul>
     </div>
 
@@ -133,12 +148,12 @@
     </div>
 
     <div id="concurrency-in-go" class="step">
-        <h2>Concurrency in Go</h2>
+        <h3>Concurrency in Go</h2>
         <ul>
             <li>Goroutines are small lightweight processes that are managed by
                 Go's runtime.
             </li>
-            <li>Channels are first class citizen that connects Goroutines</li>
+            <li>Channels are first class citizen that connects Goroutines.</li>
         </ul>
     </div>
 
