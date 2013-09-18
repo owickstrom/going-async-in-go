@@ -221,7 +221,7 @@ span.artifact {
 }
 
 #intro h1 {
-    font-size: 175%;
+    font-size: 300%;
     line-height: 1.1em;
     margin-bottom: .2em;
     color: #3A4AA4;
@@ -229,6 +229,14 @@ span.artifact {
 
 #intro .footnote {
     font-size: 50px;
+}
+
+.authors {
+    font-size: 75%;
+}
+
+.authors:before {
+    content: 'by ';
 }
 
 .hint {
