@@ -151,6 +151,7 @@ li {
     line-height: 1.2;
     font-size: 200%;
     opacity: 0;
+    left: -200px;
 }
 
 /*
@@ -159,16 +160,17 @@ li {
     Basically we remove the margin and make inactive steps a little bit transparent.
 */
 .impress-enabled .step {
-    margin: 0;
-
-    -webkit-transition: opacity .2s;
-    -moz-transition:    opacity .2s;
-    -ms-transition:     opacity .2s;
-    -o-transition:      opacity .2s;
-    transition:         opacity .2s;
+    -webkit-transition: all .2s;
+    -moz-transition:    all .2s;
+    -ms-transition:     all .2s;
+    -o-transition:      all .2s;
+    transition:         all .2s;
 }
 
-.impress-enabled .step.active { opacity: 1 }
+.impress-enabled .step.active {
+    left: 0;
+    opacity: 1
+}
 
 .step h1,
 .step h2,
@@ -176,7 +178,7 @@ li {
 .step h4 {
     font-weight: bold;
     color: #3A4AA4;
-    margin-bottom: .3em;
+    margin-bottom: .2em;
 }
 
 .step h2 {
@@ -344,7 +346,7 @@ span.artifact {
 .impress-enabled #impress { pointer-events: auto }
 
 .gist {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .gist-meta {
