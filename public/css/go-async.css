@@ -138,7 +138,8 @@ li {
 
 .step {
     position: relative;
-    width: 1000px;
+    width: auto;
+    min-width: 1000px;
     padding: 40px;
     margin: 20px auto;
 
