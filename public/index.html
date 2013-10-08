@@ -133,12 +133,13 @@
     <div id="maps" class="step">
         <h3>Maps</h3>
         <ul>
-            <li>
-                Slices wraps the more low level arrays in Go, and are the most
-                commonly used
-                sequence type.
-            </li>
-            <li>They are variable length and can have a capacity.</li>
+            <li>Go provides a built-in map type that implements a hash table</li>
+
+            <li>Keys must be <code>comparable</code> while values can be anything</li>
+
+            <li>Maps are not safe when used concurrently</li>
+
+            <li>No iteration order</li>
         </ul>
     </div>
 
